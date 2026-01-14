@@ -1,0 +1,15 @@
+{
+  "name": "dark-window-visual-novel",
+  "version": "1.0.0",
+  "description": "A horror visual novel game - The Dark Window",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["visual-novel", "horror", "game"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
