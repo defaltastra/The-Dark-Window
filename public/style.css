@@ -44,11 +44,6 @@ body::before {
     }
 }
 
-#volume-slider {
-    width: 100px;
-    accent-color: #8b0000;
-}
-
 
 .container {
     width: 90%;

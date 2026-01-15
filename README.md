@@ -2,8 +2,15 @@
 
 A complete horror visual novel game built with Node.js and Express.
 
-## Installation
+## Setup & Installation
 
+1. Clone the repository:
+```bash
+git clone https://github.com/defaltastra/The-Dark-Window.git
+cd The-Dark-Window
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```

@@ -301,3 +301,37 @@ class VisualNovel {
 
 const game = new VisualNovel();
 game.loadStory();
+
+// Auto-play background music at 100% volume
+const audio = document.getElementById('background-music');
+audio.volume = 1.0;
+
+let musicStarted = false;
+
+// Function to start music
+const startMusic = () => {
+    if (!musicStarted) {
+        audio.play().then(() => {
+            musicStarted = true;
+            console.log('Background music started');
+        }).catch(error => {
+            console.log('Audio play failed:', error);
+        });
+    }
+};
+
+// Try to autoplay immediately
+startMusic();
+
+// If autoplay is blocked, play on first user interaction
+const playOnInteraction = () => {
+    startMusic();
+    // Remove listeners after first successful play
+    document.removeEventListener('click', playOnInteraction);
+    document.removeEventListener('keydown', playOnInteraction);
+    document.removeEventListener('touchstart', playOnInteraction);
+};
+
+document.addEventListener('click', playOnInteraction);
+document.addEventListener('keydown', playOnInteraction);
+document.addEventListener('touchstart', playOnInteraction);
